@@ -3,8 +3,8 @@
 class PaymentPage {
     constructor(){
         this.cardNumber_field = '[data-elements-stable-field-name="cardNumber"]'
-        this.cardExpiry_field = '[autocomplete="cc-exp"]'
-        this.cvc_field = '[autocomplete="cc-csc"]'
+        this.cardExpiry_field = '[data-elements-stable-field-name="cardExpiry"]'
+        this.cvc_field = '[data-elements-stable-field-name="cardCvc"]'
         this.consentCheckbox = '[data-id-consent-check]'
         this.placeOrder_button = '[data-checkout]'
     }
@@ -12,10 +12,9 @@ class PaymentPage {
     
 
     addPaymentDetails(cardNumber,expiry,cvv){
-        cy.iframe('iframe[title="Secure card number input frame"]').find(this.cardNumber_field).type('42424242442')
-        // cy.get(this.cardNumber_field).should('be.visible').type(cardNumber)
-        // cy.get(this.cardExpiry_field).should('be.visible').type(expiry)
-        // cy.get(this.cvc_field).should('be.visible').type(cvv)
+        cy.iframe('iframe[title="Secure card number input frame"]').find(this.cardNumber_field).type(cardNumber)
+        cy.iframe('iframe[title="Secure expiration date input frame"]').find(this.cardExpiry_field).type(expiry)
+        cy.iframe('iframe[title="Secure CVC input frame"]').find(this.cvc_field).type(cvv)
     }
     checkConsent(){
         cy.get(this.consentCheckbox).click({force: true})
