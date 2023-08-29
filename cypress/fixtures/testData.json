@@ -1,0 +1,9 @@
+{
+  "firstName": "Test",
+  "lastName": "Test",
+  "date_of_birth": "16/03/1999",
+  "address": "Level 6 17-19 Bridge St, SYDNEY NSW 2000",
+  "cardNumber": "4000058260000005",
+  "expiry": "0525",
+  "cvv": "123"
+}
