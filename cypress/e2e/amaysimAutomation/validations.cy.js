@@ -23,7 +23,6 @@ describe('Payment Validation', () => {
     it('Validate Incorrect Credit Card Data', () => {
         homePage.selectPlan('7 day SIM plans')
         simPlanPage.buyPlan()
-        cy.wait(10000)
         cartPage.selectMobileNumber()
         cartPage.selectSimType()
         cartPage.checkout()
@@ -37,7 +36,6 @@ describe('Payment Validation', () => {
         aboutPage.selectPaymentType()
         aboutPage.checkTerms()
         aboutPage.continueToPayment()
-        cy.wait(10000)
         paymentPage.addPaymentDetails(
             globalThis.data.cardNumber,
             globalThis.data.expiry,
@@ -45,5 +43,6 @@ describe('Payment Validation', () => {
         )
         paymentPage.checkConsent()
         paymentPage.clickPlaceOrder_button()
+        paymentPage.validateErrorMessage()
     })
 })
