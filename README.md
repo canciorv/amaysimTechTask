@@ -32,7 +32,7 @@ cd amaysimTechTask
 
 ## install the node_modules
 npm install
-
+```
 ### 3. Add the project to Cypress
 
 [Follow these instructions to add the project to Cypress.](https://on.cypress.io/writing-your-first-test)
