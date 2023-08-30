@@ -50,5 +50,6 @@ Password is not hardcoded on the cypress.config.js for better security
 ### 5. Run in Continuous Integration
 
 [Follow these instructions to run the tests in CI.](https://on.cypress.io/continuous-integration)
+
 [Follow these instructions to run the tests in Jenkins.]([https://on.cypress.io/continuous-integration](https://www.lambdatest.com/blog/jenkins-and-cypress-tutorial/)https://www.lambdatest.com/blog/jenkins-and-cypress-tutorial/)
 
