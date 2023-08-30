@@ -39,17 +39,27 @@ npm install
 
 [Follow these instructions to add the project to Cypress.](https://on.cypress.io/writing-your-first-test)
 
-### 4. Run Cypress test
+### 4. Add your password on the Scripts
 
 Scripts to run are added on the [package.json](https://github.com/canciorv/amaysimTechTask/blob/main/package.json). Please add your desired password required for creating a user before running a script or else the test would fail.
+
+Ex.
 ```
 npx cypress run --headed --env password=addDesiredPassword
 ```
 Password is not hardcoded on the cypress.config.js for better security
 
+### 4. Run your Cypress Test
+
+Now that you have configured your scripts to contain a password you can now run your Cypress test 
+
+Ex.
+```
+npm run testChrome
+```
 ### 5. Run in Continuous Integration
 
 [Follow these instructions to run the tests in CI.](https://on.cypress.io/continuous-integration)
 
-[Follow these instructions to run the tests in Jenkins.]([https://on.cypress.io/continuous-integration](https://www.lambdatest.com/blog/jenkins-and-cypress-tutorial/)https://www.lambdatest.com/blog/jenkins-and-cypress-tutorial/)
+[Follow these instructions to run the tests in Jenkins.](https://on.cypress.io/continuous-integration](https://www.lambdatest.com/blog/jenkins-and-cypress-tutorial/)https://www.lambdatest.com/blog/jenkins-and-cypress-tutorial)
 
