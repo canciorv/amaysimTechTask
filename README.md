@@ -3,7 +3,9 @@
 This repo contains a test on the amaysim website (https://www.amaysim.com.au/) purchasing a 7-day mobile plan, where failed
 credit card payments should register as a failure, with the tests written in Cypress.
 
-Additionally this example app is configured to run tests in Circle CI and Travis CI.
+The tests are commented to ease you into the Cypress API.
+
+Additionally this example app is configured to run tests in Jenkins CI.
 
 ## Help + Testing
 
@@ -37,6 +39,16 @@ npm install
 
 [Follow these instructions to add the project to Cypress.](https://on.cypress.io/writing-your-first-test)
 
-### 4. Run in Continuous Integration
+### 4. Run Cypress test
+
+Scripts to run are added on the [package.json](https://github.com/canciorv/amaysimTechTask/blob/main/package.json). Please add your desired password required for creating a user before running a script or else the test would fail.
+```
+npx cypress run --headed --env password=addDesiredPassword
+```
+Password is not hardcoded on the cypress.config.js for better security
+
+### 5. Run in Continuous Integration
 
 [Follow these instructions to run the tests in CI.](https://on.cypress.io/continuous-integration)
+[Follow these instructions to run the tests in Jenkins.]([https://on.cypress.io/continuous-integration](https://www.lambdatest.com/blog/jenkins-and-cypress-tutorial/)https://www.lambdatest.com/blog/jenkins-and-cypress-tutorial/)
+
