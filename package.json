@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "testHeaded": "npx cypress run --headed --env password=secret",
-    "testHeadless": "npx cypress run --headed --env password=secret",
-    "testChrome": "npx cypress run --browser chrome --env password=secret",
-    "testElectron": "npx cypress run --browser electron --env password=secret"
+    "testHeaded": "npx cypress run --headed --env password=",
+    "testHeadless": "npx cypress run --headless --env password=",
+    "testChrome": "npx cypress run --browser chrome --env password=",
+    "testElectron": "npx cypress run --browser electron --env password="
   },
   "author": "",
   "license": "ISC",

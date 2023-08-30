@@ -1,5 +1,4 @@
 /// <reference types="Cypress" />
-
 class PaymentPage {
     constructor(){
         this.cardNumber_field = '[data-elements-stable-field-name="cardNumber"]'
@@ -11,10 +10,9 @@ class PaymentPage {
         this.payment_form = '#payment-header-name'
     }
 
-    
-
     addPaymentDetails(cardNumber,expiry,cvv){
         cy.get((this.payment_form), { timeout: 10000 }).should('be.visible')
+        //command used to select an iframe
         cy.iframe('iframe[title="Secure card number input frame"]').find(this.cardNumber_field).type(cardNumber)
         cy.iframe('iframe[title="Secure expiration date input frame"]').find(this.cardExpiry_field).type(expiry)
         cy.iframe('iframe[title="Secure CVC input frame"]').find(this.cvc_field).type(cvv)

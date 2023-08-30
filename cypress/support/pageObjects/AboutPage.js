@@ -20,7 +20,7 @@ class AboutPage {
     }
 
     createUser(fName,lName,dateOfBirth,address){
-
+        //generates a random string
         function makeid(length) {
             let result = '';
             let characters = '0123456789';
@@ -37,6 +37,7 @@ class AboutPage {
         cy.get(this.password_field).type(Cypress.env('password'))
         cy.get(this.contactNumber_field).type("04" + makeid(8))
         cy.get(this.address_field).type(address)
+        //Selects the dropdown option equal to the text written on the address field
         cy.get(this.address_list).invoke('show').should('be.visible').each(($e1) => {
             if($e1.text().trim() == address){
                 cy.wrap($e1).click({force:true})

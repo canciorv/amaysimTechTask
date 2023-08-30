@@ -23,8 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-import 'cypress-iframe';
 
+//import this dependency to select iframes
+import 'cypress-iframe';
+//select a simPlan command
 Cypress.Commands.add('selectSimPlan', (simPlan_to_select) => {
     cy.get('.btn-mobile-box').click({force: true})
     cy.get('nav').contains('SIM plans').click({force:true})
